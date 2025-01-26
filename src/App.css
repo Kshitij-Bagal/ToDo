@@ -1,0 +1,502 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Default light mode variables */
+:root {
+  --bg-color: #ffffff; /* Light background */
+  --text-color: #000000; /* Dark text */
+  --task-bg-color: #f8f9fa; /* Lighter task background */
+}
+
+/* Default light mode styles */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main_div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .btn {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.dark-mode .list-group-item {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .completed-tasks {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+header {
+  background-color: #343a40; /* Bootstrap dark color */
+  color: #ffffff !important; /* Force white text for visibility */
+  padding: 0px;
+}
+
+ .footer {
+  background-color: #343a40; /* Bootstrap dark color */
+  color: #ffffff !important; /* Force white text for visibility */
+  padding: 0px;
+}
+
+.nav-link, .footer_div p, .footer_div div {
+  color: #ffffff !important; /* Force white links for visibility */
+}
+
+.nav-link:hover{
+background-color: #343a40;
+}
+
+.header .btn, .footer .btn {
+  background-color: #ffffff;
+  color: #343a40;
+}
+
+.header .btn:hover, .footer .btn:hover {
+  background-color: #f8f9fa; /* Bootstrap light gray */
+  color: #343a40;
+}
+
+/* Dark mode should not affect Header and Footer */
+.dark-mode .header, 
+.dark-mode .footer {
+  background-color: #343a40;
+  color: #ffffff !important;
+}
+
+.dark-mode .header a, 
+.dark-mode .footer a {
+  color: #ffffff !important;
+}
+
+.dark-mode .header .btn, 
+.dark-mode .footer .btn {
+  background-color: #ffffff;
+  color: #343a40;
+}
+
+.dark-mode .header .btn:hover, 
+.dark-mode .footer .btn:hover {
+  background-color: #f8f9fa;
+  color: #343a40;
+}
+.nav-item-hover {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-item-hover:hover {
+  color: #ffc107; /* Change text color on hover */
+}
+
+.nav-item-hover:hover::after {
+  width: 100%;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.navbar {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #343a40; /* Bootstrap dark */
+  color: #ffffff;
+  padding: 10px 15px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-item {
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav-list {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+}
+
+.navbar-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
+.home-container,
+.nav-container {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+  justify-content: center;
+}
+
+.nav-container{
+  align-items:center;
+  gap: 50px;;
+}
+
+.row{
+  width: clamp(300px, 100%, 600px);
+  justify-content: center;
+}
+
+.home-container
+{
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.container {
+  width: 60%;
+  margin: 30px 20%;
+}
+
+h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: clamp(300px, 100%, 400px);
+  padding: 10px;
+  border: 1px solid #ced4da; /* Bootstrap light gray */
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+input{
+  width: clamp(300px, 100%, 400px);
+
+}
+
+.input-group button {
+  padding: 10px 20px;
+  border: 1px solid #ced4da; /* Bootstrap light gray */
+  border-radius: 0 0.25rem 0.25rem 0;
+  background-color: #007bff; /* Bootstrap blue */
+  color: #000000;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.input-group button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #dee2e6; /* Bootstrap light gray */
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: var(--task-bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.list-group-item button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+.list-group-item .btn-success {
+  background-color: #28a745; /* Bootstrap green */
+  color: #000000;
+}
+
+.list-group-item .btn-success:hover {
+  background-color: #218838; /* Darker green */
+  scale: 1.1;
+}
+
+.list-group-item,.input-group{
+  box-shadow: 3px 3px 3.5px -4px rgba(0,0,0,0.75);
+  text-align: center;
+}
+
+.list-group-item .btn-danger {
+  background-color: #dc3545; /* Bootstrap red */
+  color: #000000;
+  
+}
+
+.list-group-item .btn-danger:hover {
+  background-color: #c82333; /* Darker red */
+  scale: 1.1;
+}
+
+.completed-tasks {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.completed-tasks h3 {
+  margin-bottom: 15px;
+}
+
+.completed-tasks .list-group-item {
+  background-color: #e9ecef; /* Bootstrap light gray */
+  text-decoration: line-through;
+  color: #6c757d; /* Bootstrap muted gray */
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #292b2c;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  padding: 2px 0px 5px 0px;
+}
+
+footer a {
+  padding: 1px 10px 1px 10px;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar .logo {
+  margin-left: 10px;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-container,
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin: 20px 10%;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: row;
+  }
+
+  .input-group button {
+    width: 150px;
+    margin-bottom: 5px;
+    border-radius: 0.25rem;
+    z-index: 0;
+  }
+
+  .input-group .todo-input{
+    width: 300;
+    margin-bottom: 5px;
+    border-radius: 0.25rem;
+  }
+
+  .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list-group-item button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .completed-tasks {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+  }
+
+  .navbar-brand {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-list {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .home-container,
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 10px 5%;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .input-group {
+    flex-direction: row;
+  }
+
+  .input-group button {
+    width: 150px;
+    margin-bottom: 5px;
+    border-radius: 0.25rem;
+    z-index: 0;
+  }
+
+  .input-group .todo-input{
+    width: 300;
+    margin-bottom: 5px;
+    border-radius: 0.25rem;
+  }
+
+  .list-group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list-group-item button {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .completed-tasks {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
